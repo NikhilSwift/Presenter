@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 
-enum ShapeManager{
+public enum ShapeManager{
     case Rounded(radius: CGFloat)
     case Ticket(totalObject: CGFloat)
     case Bubble(totalObject: CGFloat)

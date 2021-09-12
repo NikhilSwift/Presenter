@@ -7,12 +7,12 @@
 
 import UIKit
 
-class CustomPresentationViewController: UIViewController {
+public class CustomPresentationViewController: UIViewController {
     var SetPointOrigin = false
     var pointOrigin: CGPoint?
     var mainView: UIView?
     var minDragVelocity : CGFloat = 1250
-    init (with View: UIView?){
+   public init (with View: UIView?){
         self.mainView = View
         super.init(nibName: nil, bundle: nil)
     }
@@ -20,7 +20,7 @@ class CustomPresentationViewController: UIViewController {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .white
         guard let PresntView = mainView else {return}
@@ -29,7 +29,7 @@ class CustomPresentationViewController: UIViewController {
         self.view.addGestureRecognizer(pangesture)
     }
     
-    override func viewDidLayoutSubviews() {
+    public override func viewDidLayoutSubviews() {
         if !SetPointOrigin{
             SetPointOrigin = true
             pointOrigin = self.view.frame.origin
