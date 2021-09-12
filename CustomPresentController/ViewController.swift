@@ -7,7 +7,6 @@
 
 import UIKit
 
-
 class ViewController: UIViewController {
     let PresentingView = CustomView()
     var presentationStyle : ShapeManager!
@@ -58,7 +57,7 @@ class ViewController: UIViewController {
 
 extension ViewController: UIViewControllerTransitioningDelegate{
     func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
-        CutomPresentationviewController(presentedViewController: presented, presenting: presenting, blurEffectStyle: .dark, height: self.view.frame.height * 0.7, type: self.presentationStyle)
+        CutomPresentationviewController(presentedViewController: presented, presenting: presenting, blurEffectStyle: .dark, height: self.view.frame.height * 0.7, type: .Bubble(totalObject: 10))
     }
 }
 
