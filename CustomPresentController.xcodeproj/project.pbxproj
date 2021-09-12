@@ -12,6 +12,9 @@
 		E324A9B526EE388F00439CF6 /* Presenter.h in Headers */ = {isa = PBXBuildFile; fileRef = E324A9A526EE388E00439CF6 /* Presenter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E324A9B826EE388F00439CF6 /* Presenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E324A9A326EE388E00439CF6 /* Presenter.framework */; };
 		E324A9B926EE388F00439CF6 /* Presenter.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E324A9A326EE388E00439CF6 /* Presenter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E324A9CA26EE489A00439CF6 /* CustomShapeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E324A9C926EE489A00439CF6 /* CustomShapeManager.swift */; };
+		E324A9D026EE490000439CF6 /* CustomPresentationProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E324A9CF26EE490000439CF6 /* CustomPresentationProperties.swift */; };
+		E324A9D626EE493E00439CF6 /* CustomPresentationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E324A9D526EE493E00439CF6 /* CustomPresentationViewController.swift */; };
 		E3888B1F26EDE2E300702DBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3888B1E26EDE2E300702DBA /* AppDelegate.swift */; };
 		E3888B2326EDE2E300702DBA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3888B2226EDE2E300702DBA /* ViewController.swift */; };
 		E3888B2626EDE2E300702DBA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3888B2426EDE2E300702DBA /* Main.storyboard */; };
@@ -84,6 +87,9 @@
 		E324A9AB26EE388E00439CF6 /* PresenterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PresenterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E324A9B226EE388F00439CF6 /* PresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterTests.swift; sourceTree = "<group>"; };
 		E324A9B426EE388F00439CF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E324A9C926EE489A00439CF6 /* CustomShapeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomShapeManager.swift; sourceTree = "<group>"; };
+		E324A9CF26EE490000439CF6 /* CustomPresentationProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPresentationProperties.swift; sourceTree = "<group>"; };
+		E324A9D526EE493E00439CF6 /* CustomPresentationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPresentationViewController.swift; sourceTree = "<group>"; };
 		E3888B1B26EDE2E300702DBA /* CustomPresentController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomPresentController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3888B1E26EDE2E300702DBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3888B2226EDE2E300702DBA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -149,6 +155,9 @@
 			children = (
 				E324A9A526EE388E00439CF6 /* Presenter.h */,
 				E324A9A626EE388E00439CF6 /* Info.plist */,
+				E324A9C926EE489A00439CF6 /* CustomShapeManager.swift */,
+				E324A9CF26EE490000439CF6 /* CustomPresentationProperties.swift */,
+				E324A9D526EE493E00439CF6 /* CustomPresentationViewController.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -338,6 +347,7 @@
 				TargetAttributes = {
 					E324A9A226EE388E00439CF6 = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 					};
 					E324A9AA26EE388E00439CF6 = {
 						CreatedOnToolsVersion = 12.4;
@@ -424,6 +434,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E324A9CA26EE489A00439CF6 /* CustomShapeManager.swift in Sources */,
+				E324A9D626EE493E00439CF6 /* CustomPresentationViewController.swift in Sources */,
+				E324A9D026EE490000439CF6 /* CustomPresentationProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -517,6 +530,7 @@
 		E324A9BB26EE388F00439CF6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -535,6 +549,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.nikhil.SideMenu.Presenter;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -545,6 +560,7 @@
 		E324A9BC26EE388F00439CF6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -729,6 +745,7 @@
 		E3888B4626EDE2E800702DBA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -749,6 +766,7 @@
 		E3888B4726EDE2E800702DBA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
