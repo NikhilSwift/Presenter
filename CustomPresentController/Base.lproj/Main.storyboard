@@ -1,24 +1,107 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CustomPresentController" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kIj-3M-wwh">
+                                <rect key="frame" x="131.5" y="84" width="151" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="151" id="At9-6f-Lmw"/>
+                                    <constraint firstAttribute="height" constant="60" id="rt3-WX-WNj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="28"/>
+                                <state key="normal" title="Bubble">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RwY-GW-2Lq">
+                                <rect key="frame" x="131.5" y="184" width="151" height="46"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="28"/>
+                                <state key="normal" title="Ticket">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jlR-lO-0zT">
+                                <rect key="frame" x="131.5" y="270" width="151" height="46"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="28"/>
+                                <state key="normal" title="Waves">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sWi-i4-HJ0">
+                                <rect key="frame" x="131.5" y="356" width="151" height="46"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="28"/>
+                                <state key="normal" title="Fluid">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TvB-q1-q6B">
+                                <rect key="frame" x="131.5" y="442" width="151" height="46"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="28"/>
+                                <state key="normal" title="Coupon">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xaz-D4-0ZH">
+                                <rect key="frame" x="131.5" y="528" width="151" height="46"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="28"/>
+                                <state key="normal" title="Rounded">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                        <constraints>
+                            <constraint firstItem="kIj-3M-wwh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2Ne-GX-VZ1"/>
+                            <constraint firstItem="TvB-q1-q6B" firstAttribute="leading" secondItem="sWi-i4-HJ0" secondAttribute="leading" id="2ei-Wb-QMg"/>
+                            <constraint firstItem="TvB-q1-q6B" firstAttribute="trailing" secondItem="sWi-i4-HJ0" secondAttribute="trailing" id="6n4-xl-WXl"/>
+                            <constraint firstItem="sWi-i4-HJ0" firstAttribute="top" secondItem="jlR-lO-0zT" secondAttribute="bottom" constant="40" id="E9M-Y3-HtR"/>
+                            <constraint firstItem="RwY-GW-2Lq" firstAttribute="trailing" secondItem="kIj-3M-wwh" secondAttribute="trailing" id="HG0-zr-peg"/>
+                            <constraint firstItem="jlR-lO-0zT" firstAttribute="trailing" secondItem="RwY-GW-2Lq" secondAttribute="trailing" id="Hhp-iE-2EI"/>
+                            <constraint firstItem="kIj-3M-wwh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="K1k-vg-VxL"/>
+                            <constraint firstItem="jlR-lO-0zT" firstAttribute="leading" secondItem="RwY-GW-2Lq" secondAttribute="leading" id="RMV-nm-jlo"/>
+                            <constraint firstItem="RwY-GW-2Lq" firstAttribute="top" secondItem="kIj-3M-wwh" secondAttribute="bottom" constant="40" id="Weu-0l-8Tg"/>
+                            <constraint firstItem="RwY-GW-2Lq" firstAttribute="leading" secondItem="kIj-3M-wwh" secondAttribute="leading" id="XfI-LZ-5t9"/>
+                            <constraint firstItem="jlR-lO-0zT" firstAttribute="top" secondItem="RwY-GW-2Lq" secondAttribute="bottom" constant="40" id="cYy-fK-N1Y"/>
+                            <constraint firstItem="TvB-q1-q6B" firstAttribute="top" secondItem="sWi-i4-HJ0" secondAttribute="bottom" constant="40" id="hga-7D-h5k"/>
+                            <constraint firstItem="sWi-i4-HJ0" firstAttribute="trailing" secondItem="jlR-lO-0zT" secondAttribute="trailing" id="hlV-7v-QhC"/>
+                            <constraint firstItem="xaz-D4-0ZH" firstAttribute="top" secondItem="TvB-q1-q6B" secondAttribute="bottom" constant="40" id="kdJ-UM-kS9"/>
+                            <constraint firstItem="xaz-D4-0ZH" firstAttribute="leading" secondItem="TvB-q1-q6B" secondAttribute="leading" id="l1C-re-7QA"/>
+                            <constraint firstItem="xaz-D4-0ZH" firstAttribute="trailing" secondItem="TvB-q1-q6B" secondAttribute="trailing" id="sIJ-GM-wrn"/>
+                            <constraint firstItem="sWi-i4-HJ0" firstAttribute="leading" secondItem="jlR-lO-0zT" secondAttribute="leading" id="uvV-wr-u4V"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="couponButton" destination="TvB-q1-q6B" id="fxz-Na-Nuo"/>
+                        <outlet property="fluidButton" destination="sWi-i4-HJ0" id="4nQ-JN-j6Q"/>
+                        <outlet property="presentButton" destination="kIj-3M-wwh" id="f6F-mU-T7e"/>
+                        <outlet property="roundedButton" destination="xaz-D4-0ZH" id="XBc-Ru-bJs"/>
+                        <outlet property="ticketButton" destination="RwY-GW-2Lq" id="VsG-cw-cem"/>
+                        <outlet property="wavesButton" destination="jlR-lO-0zT" id="SWd-WM-ip5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="132" y="102"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
