@@ -6,7 +6,6 @@
 //
 
 import UIKit
-
 class ViewController: UIViewController {
     let PresentingView = CustomView()
 //    var presentationStyle : ShapeManager!
