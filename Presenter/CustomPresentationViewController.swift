@@ -10,29 +10,49 @@ import UIKit
 public class CustomPresentationViewController: UIViewController {
     var SetPointOrigin = false
     var pointOrigin: CGPoint?
-    var mainView: UIView?
+    var mainViewController: UIViewController?
     var minDragVelocity : CGFloat = 1250
-   public init (with View: UIView?){
-        self.mainView = View
+    
+   public init (with ViewController: UIViewController?){
+        self.mainViewController = ViewController
         super.init(nibName: nil, bundle: nil)
+    }
+    
+    deinit {
+        removeViewController()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
     public override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .white
-        guard let PresntView = mainView else {return}
-        self.view = PresntView
         let pangesture = UIPanGestureRecognizer(target: self, action: #selector(panGestureRecognizerAction(sender:)))
         self.view.addGestureRecognizer(pangesture)
     }
+    public override func viewDidDisappear(_ animated: Bool) {
+        removeViewController()
+    }
+    func addViewController(){
+        guard let PresntViewController = mainViewController else {return}
+        PresntViewController.view.frame = self.view.bounds
+        self.view.addSubview(PresntViewController.view)
+        PresntViewController.didMove(toParent: self)
+    }
     
+    func removeViewController(){
+        guard let PresntViewController = mainViewController else {return}
+        PresntViewController.willMove(toParent: nil)
+        PresntViewController.view.removeFromSuperview()
+        PresntViewController.removeFromParent()
+    }
     public override func viewDidLayoutSubviews() {
         if !SetPointOrigin{
             SetPointOrigin = true
             pointOrigin = self.view.frame.origin
+            addViewController()
         }
     }
     

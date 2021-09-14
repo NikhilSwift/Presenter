@@ -7,7 +7,7 @@
 
 import UIKit
 
-public class CutomPresentationviewController: UIPresentationController {
+public class CutomPresentationPropertiesViewController: UIPresentationController {
     
     let blurEffectView: UIVisualEffectView!
     var tapGesturerecognizer = UITapGestureRecognizer()
