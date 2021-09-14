@@ -6,10 +6,9 @@
 //
 
 import UIKit
-import PresenterPopOver
 class ViewController: UIViewController {
     let PresentingView = CustomView()
-    var presentationStyle : ShapeManager!
+//    var presentationStyle : ShapeManager!
     @IBOutlet weak var presentButton: UIButton!
     @IBOutlet weak var ticketButton: UIButton!
     @IBOutlet weak var wavesButton: UIButton!
@@ -31,34 +30,34 @@ class ViewController: UIViewController {
     }
 
     @objc func presentView(_ sender: UIButton){
-        switch sender.tag{
-        case 1:
-            self.presentationStyle = .Bubble(totalObject: 10)
-        case 2:
-            self.presentationStyle = .Ticket(totalObject: 10)
-        case 3:
-            self.presentationStyle = .Wave(totalObject: 10)
-        case 4:
-            self.presentationStyle = .Fluid(height: 100)
-        case 5:
-            self.presentationStyle = .Coupon(totalObject: 10)
-        case 6:
-            self.presentationStyle = .Rounded(radius: 40)
-        default:
-            break;
-        }
-        PresentingView.dismissDelegate = self
-        let vc = CustomPresentationViewController(with: PresentingView)
-        vc.modalPresentationStyle = .custom
-        vc.transitioningDelegate = self
-        self.present(vc, animated: true, completion: nil)
+//        switch sender.tag{
+//        case 1:
+//            self.presentationStyle = .Bubble(totalObject: 10)
+//        case 2:
+//            self.presentationStyle = .Ticket(totalObject: 10)
+//        case 3:
+//            self.presentationStyle = .Wave(totalObject: 10)
+//        case 4:
+//            self.presentationStyle = .Fluid(height: 100)
+//        case 5:
+//            self.presentationStyle = .Coupon(totalObject: 10)
+//        case 6:
+//            self.presentationStyle = .Rounded(radius: 40)
+//        default:
+//            break;
+//        }
+//        PresentingView.dismissDelegate = self
+//        let vc = CustomPresentationViewController(with: PresentingView)
+//        vc.modalPresentationStyle = .custom
+//        vc.transitioningDelegate = self
+//        self.present(vc, animated: true, completion: nil)
     }
 }
 
 extension ViewController: UIViewControllerTransitioningDelegate{
-    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
-        CutomPresentationviewController(presentedViewController: presented, presenting: presenting, blurEffectStyle: .dark, height: self.view.frame.height * 0.7, type: presentationStyle)
-    }
+//    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+//        CutomPresentationviewController(presentedViewController: presented, presenting: presenting, blurEffectStyle: .dark, height: self.view.frame.height * 0.7, type: presentationStyle)
+//    }
 }
 
 

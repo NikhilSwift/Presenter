@@ -1,6 +1,0 @@
-framework module Pods_CustomPresentController_CustomPresentControllerUITests {
-  umbrella header "Pods-CustomPresentController-CustomPresentControllerUITests-umbrella.h"
-
-  export *
-  module * { export * }
-}
