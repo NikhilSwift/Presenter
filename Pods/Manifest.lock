@@ -1,0 +1,16 @@
+PODS:
+  - PresenterPopOver (0.0.3)
+
+DEPENDENCIES:
+  - PresenterPopOver
+
+SPEC REPOS:
+  trunk:
+    - PresenterPopOver
+
+SPEC CHECKSUMS:
+  PresenterPopOver: 151e251a9d63ff53634fb91d854efe00c3397d03
+
+PODFILE CHECKSUM: 6fe336bc434c305a8758366bc05ef0f50e973189
+
+COCOAPODS: 1.10.1

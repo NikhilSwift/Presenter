@@ -1,0 +1,6 @@
+framework module PresenterPopOver {
+  umbrella header "PresenterPopOver-umbrella.h"
+
+  export *
+  module * { export * }
+}
