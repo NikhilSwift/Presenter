@@ -7,23 +7,30 @@
 <li class="has-line-data" data-line-start="8" data-line-end="10">✨Magic ✨</li>
 </ul>
 <h2 class="code-line" data-line-start=10 data-line-end=11 ><a id="Usage_10"></a>Usage</h2>
-<ul>
-<li class="has-line-data" data-line-start="12" data-line-end="14">Import a PresenterPopOver<br>
-(import PresenterPopOver)</li>
-<li class="has-line-data" data-line-start="14" data-line-end="21">Assign your Fav UIView to the CustomPresentationViewController<br>
-{<br>
-let vc = CustomPresentationViewController(with: Your_View)<br>
-vc.modalPresentationStyle = .custom<br>
-vc.transitioningDelegate = self<br>
-self.present(vc, animated: true, completion: nil)<br>
-}</li>
-<li class="has-line-data" data-line-start="21" data-line-end="28">Return CutomPresentationviewController in UIViewControllerTransitioningDelegate<br>
-{<br>
-func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -&gt; UIPresentationController? {<br>
-CutomPresentationviewController(presentedViewController: presented, presenting: presenting, blurEffectStyle: .dark, height: Your_Height, type: .Bubble(totalObject: Your_Number_Of_Bubble))<br>
-}<br>
-}</li>
-</ul>
+
+```swift
+import PresenterPopOver
+
+# Assign your UIViewController to the CustomPresentationViewController
+{
+    let vc = CustomPresentationViewController(with: Your_View_Controller)
+    vc.modalPresentationStyle = .custom
+    vc.transitioningDelegate = self
+    self.present(vc, animated: true, completion: nil)
+}
+
+# Return CutomPresentationPropertiesViewController in UIViewControllerTransitioningDelegate
+extension Your_View_Controller: UIViewControllerTransitioningDelegate{
+    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+        //Presenter Popover Custom Presentation Properties Controller
+        CutomPresentationPropertiesViewController(presentedViewController: presented, presenting: presenting, blurEffectStyle: .dark, height: self.view.frame.height * 0.7, type: presentationStyle)
+        
+    }
+}
+
+# To Dimiss the Presented Your_View_Controller 
+   self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
+```
 <a href="https://postimg.cc/hQz74Y6t" target="_blank"><img src="https://i.postimg.cc/XqxKLSgd/IMG-8785.png" alt="IMG-8785"/></a><br/><br/>
 <a href="https://postimg.cc/HjVMtJn1" target="_blank"><img src="https://i.postimg.cc/59mmbLMy/IMG-8786.png" alt="IMG-8786"/></a><br/><br/>
 <a href="https://postimg.cc/JtvkY1HD" target="_blank"><img src="https://i.postimg.cc/c44BHCsm/IMG-8787.png" alt="IMG-8787"/></a><br/><br/>
